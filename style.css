@@ -1,0 +1,128 @@
+*{
+    margin: 0;
+    padding: 0px;
+    /* 定义盒子模型，设置元素的宽度和高度不会因为设置padding、border而改变*/
+    box-sizing: border-box;
+}
+body{
+    background: #efefef;
+}
+.header{
+    width: 374px;
+    height: 50px;
+    background: rgba(47,47,47,0.98);
+    /*设置为弹性容器*/
+    display: flex;
+}
+.header .logo{
+    color: #fff;
+    width: 100px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 19px;
+
+}
+.header .input{
+    color: #fff;
+    width: 374px;
+    /*设置为弹性容器*/
+    display: flex;
+    /* 主轴居中*/
+    justify-content: center;
+    /*侧轴居中*/
+    align-items: center;
+
+}
+.header .input input{
+    border: none;
+    outline: none;
+    width: 250px;
+    height: 30px;
+    border-radius: 5px;
+    padding: 0 20px;
+}
+/* 直接子元素*/
+.list>h1{
+    margin: 20px;
+    font-size: 20px;
+    /*设置为弹性容器*/
+    display: flex;
+    /*以主轴两边靠*/
+    justify-content: space-between;
+}
+.done>h1 .num{
+    width: auto;
+    /*上下边距为0，左右边距为10 */
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 20px;
+    background: greenyellow;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+}
+.todo>h1 .num{
+    width: auto;
+    /*上下边距为0，左右边距为10 */
+    padding: 0 10px;
+    height: 25px;
+    border-radius: 20px;
+    background: deeppink;
+    color: #ffffff;
+    font-size: 15px;
+    text-align: center;
+    line-height: 25px;
+}
+.item{
+    margin: 5px 20px;
+    display: flex;
+    /* 平均分布*/
+    justify-content: space-between;
+    /* 侧轴居中 */
+    align-items: center;
+    background: #ffffff;
+    border-radius: 5px;
+    padding: 5px 15px;
+    position: relative;
+}
+/* 设置伪元素*/
+.item:before{
+    content: "";
+    width: 8px;
+    height: 100%;
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    background: greenyellow;
+    border-bottom-left-radius: 5px;
+    border-top-left-radius: 5px;
+}
+.item .checkbox{
+    display: flex;
+    /* 以侧轴为居中 */
+    align-items: center;
+}
+.item .checkbox input{
+    width: 22px;
+    height: 22px;
+    outline: none;
+
+}
+.item .content{
+    width: 260px;
+    padding: 0 10px;
+    line-height: 22px;
+}
+.item .delete{
+    width: 22px;
+    height: 22px;
+    background-image: url(delete.png);
+    background-size: 80%;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.main{
+    width: 375px;
+
+}
